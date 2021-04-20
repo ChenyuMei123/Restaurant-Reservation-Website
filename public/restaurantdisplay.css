@@ -1,0 +1,74 @@
+.rescontainer div{
+  box-sizing: border-box;
+  border-top: 1px solid darkred;
+  border-bottom: 1px solid darkred;
+  margin: 0.01%;
+  padding: 0;
+  width:600px;
+  height:200px;
+  background-color: white;
+  margin-left: 25%;
+
+}
+
+
+
+
+.resname div{
+  font-weight: bold;
+
+
+}
+.rescontainer img{
+	float:left;
+	padding: 12px;
+	height: 100%;
+	width:35%;
+}
+
+.rescontainer a{
+
+  background-color: pink;
+  border: none;
+  color: white;
+  padding: 1.5% 10%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 40px;
+
+}
+.rescontainer h1{
+	font-size: 25px;
+	font-weight: bold;
+
+}
+.rescontainer h2{
+	font-size: 15px;
+	font-weight: bold;
+
+}
+
+.rescontainer a:link {
+  text-decoration: none;
+  color:darkred;
+}
+.rescontainer a:visited {
+  text-decoration: none;
+  color:darkred;
+  }.rescontainer a:hover {
+    text-decoration: none;
+    color:pink;
+  }
+
+  .checked {
+    color: pink;
+
+  }
+
+  .unchecked{
+   color:lightgrey;
+ }

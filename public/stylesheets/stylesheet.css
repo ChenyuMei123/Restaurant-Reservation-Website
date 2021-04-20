@@ -1,0 +1,256 @@
+.background1{
+	background-image: url("background07.jpg");
+	background-size: 100%;
+	    
+}
+.contact {
+    font-family: 'Amatic SC', cursive;
+    padding: 0px 0px 120px 0px;
+}
+
+.contact h1{
+    color: darkred;
+    font-family: 'Amatic SC', cursive;
+    font-size: 35px;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+.contact h2{
+    color: darkred;
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.contact input[type=text], select {
+    width: 40%;
+    border: 1px solid #1C518C;
+    border-radius: 5px;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-family: 'Amatic SC', cursive;
+}
+
+.contact textarea {
+    width: 40%;
+    border: 1px solid #1C518C;;
+    font-family: 'Amatic SC', cursive;
+    border-radius: 5px;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.contact input[type=submit] {
+    width: 20%;
+    background-color: #86b0eb;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-family: 'Amatic SC', cursive;
+    border: 1px solid #86b0eb;
+    display: block;
+    margin: 0 auto;
+}
+
+.contact input[type=submit]:hover {
+    background-color: #F78181;
+}
+
+.footerlinks .active {
+    color: pink;
+}
+
+.footerlinks ul li {
+    display: inline-block;
+    font-size: 15px
+}
+
+.footerlinks {
+  position: fixed;
+  right: 0;
+  bottom: 15px;
+  left: 0;
+  text-align: center;
+  border-top: 1px solid darkred;
+  background-color: white;
+  font-family: 'Amatic SC', cursive;
+}
+.footerlinks li a {
+    text-decoration: none;
+    color:darkred;
+    padding: 0px 20px;
+        }
+
+.footerlinks li a:hover {
+    color: pink;
+}
+
+.copyright {
+    float: left;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-size: 10px;
+    background-color: white;font-family:sans-serif;
+}
+
+<!--feedback-->
+.feedback {
+    padding: 0px 0px 120px 0px;
+}
+
+.feedback input[type=text], input[type=tel] {
+    width: 40%;
+    border: 1px solid #1C518C;
+    border-radius: 5px;
+    
+    padding: 8px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-family: 'Amatic SC', cursive;
+}
+
+.feedback h1{
+    color: darkred;
+    font-family: 'Amatic SC', cursive;
+    font-size: 35px;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.feedback h2{
+    color: darkred;
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.feedback label{
+  width: 40%;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    color: #1C518C;
+    padding-bottom: 5px;
+    font-family: 'Amatic SC', cursive;
+}
+
+.feedback .sendButton {
+    background-color: #86b0eb;
+    color: white;
+    padding: 5px;
+    border: 1px solid #1C518C;
+    border-radius: 5px;
+    width: 20%;
+    font-family: 'Amatic SC', cursive;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin: 0 auto;
+}
+
+.feedback .cancelButton {
+    background-color: grey;
+    color: white;
+    padding: 5px;
+    border: 1px solid #1C518C;
+    width: 20%;
+    border-radius: 5px;
+    font-family: 'Amatic SC', cursive;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.feedback textarea {
+    width: 40%;
+    font-family: 'Amatic SC', cursive;
+    border: 1px solid #1C518C;
+    border-radius: 5px;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.feedback .cancelButton:hover {
+    background-color: gainsboro;
+}
+
+.feedback .sendButton:hover {
+    background-color: #F78181;
+}
+
+.feedback .buttonClass a{
+    text-decoration: none;
+}
+
+<!--privacy_policy-->
+.privacy {
+    padding: 0px 0px 120px 0px;
+}
+
+.privacy h1{
+    color: darkred;
+    font-family: 'Amatic SC', cursive;
+    font-size: 35px;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+.privacy p {
+    padding: 5px 130px;
+    text-align: justify;
+    font-size: 15px;
+    margin-bottom: 0px;
+    font-family: 'Amatic SC', cursive;
+    line-height: 150%;
+    word-spacing: 4px;
+}
+
+.privacy ul {
+    padding: 0px 130px;
+    text-align: justify;
+    font-size: 15px;
+    margin-bottom: 0px;
+    font-family: 'Amatic SC', cursive;
+    list-style-type: circle;
+    line-height: 200%;
+    word-spacing: 4px;
+}
+
+.privacy ul li{
+    margin-left: 50px;
+}

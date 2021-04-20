@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!---AIzaSyBNaVBsxgA8BBXHQZ9zi5psjhbVLiOS1Ew--->
+  <link rel="icon" href="favicon_bell.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="twistForks.css">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="twistforks.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="restaurantdisplay.css">
+  <h1 class="logohead"><img src="logohead1.png" alt="DINEoutTONIGHT" class="logoimg">  Twist Forks</h1>
+  <div class="navbar">
+    <a class="active" href="index.html">Home</a>
+    <a href="map.html">Map</a>
+
+    <div class="logdropdown">
+      <button class="logdropbtn">Login
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <button onclick="document.getElementById('id01').style.display='block'">Guest Login</button>
+        <button onclick="document.getElementById('id02').style.display='block'">restaurant Login</button>
+      </div>
+    </div>
+    <div class="logdropdown">
+      <button class="logdropbtn">Sign Up
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="signin.html">Customer Sign-Up</a>
+        <a href="register_restaurant.html">Restauranteur Sign-Up</a>
+      </div>
+    </div>
+  </div>
+
+</head>
+<body class="listBG">
+
+
+  <!---login system--->
+
+  <div id="id01" class="login">
+    
+    <form class="login-content animate">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        
+        <img src="login.jpg" width="12%"height="8%">
+      </div>
+
+
+      <div class="container">
+        <label for="uname"><b>ID:</b></label>
+        <input type="text" placeholder="Enter your ID" name="uname" required>
+
+        <label for="psw"><b>Password:</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        <div class ="loginM">
+          <button  type="submit">Login</button>
+          <button  type="submit">Login with your Facebook</button>
+          <button  ctype="submit">Login with your Twitter</button>
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember
+        </label>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbutton">Register</button>
+        <span class="psw"><a href="#">Forgot your password?</a></span> 
+        <br>
+        <br>
+        <span class="psw"><a href="#">Change your login information</a></span>
+      </div>
+    </form>
+  </div>
+
+  <script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<!---meimei login rest--->
+
+<div id="id02" class="login">
+  
+  <form class="login-content animate">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      
+      <img src="login.jpg" width="12%"height="8%">
+      <p>( Restaurant )</p>
+    </div>
+
+
+    <div class="container">
+      <label for="uname"><b>ID:</b></label>
+      <input type="text" placeholder="Enter your ID" name="uname" required>
+
+      <label for="psw"><b>Password:</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      <div class ="loginM">
+        <button  type="submit">Login</button>
+        <button  type="submit">Login with your Facebook</button>
+        <button  ctype="submit">Login with your Twitter</button>
+      </div>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbutton">Register</button>
+      <span class="psw"><a href="#">Forgot your password?</a></span> 
+      <br>
+      <br>
+      <span class="psw"><a href="#">Change your login information</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+<!---API--->
+
+<div id="googleMap" class="mapC"></div>
+
+<script>
+  function myMap() {
+    var mapProp= {
+      center:new google.maps.LatLng(-34.9157348,138.6032033),
+      zoom:5,
+    };
+    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNaVBsxgA8BBXHQZ9zi5psjhbVLiOS1Ew&callback=myMap"></script>
+<div class ="mapText">
+	<br>
+	<br>
+	<h1>Find What's Nearby!</h1>
+	<h1>Find What's New</h1>
+	<h1>In The City!</h1>
+
+</h1>
+</div>
+
+</body>
+
+<!---footer--->
+<footer>
+  <div class="footerlinks">
+    <ul>
+      <li><a href= ContactUs.html>Contact Us</a></li>
+      <li><a href=FeedBack.html>Feedback</a></li>
+      <li><a href=Privacy_Policy.html>Privacy Policy</a></li>
+
+    </ul>
+  </div>
+  <div class="copyright">
+    <p>Copyright &#169; 2019</p >
+  </div>
+</footer>
+</html>

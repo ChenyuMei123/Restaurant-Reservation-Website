@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <!---AIzaSyBNaVBsxgA8BBXHQZ9zi5psjhbVLiOS1Ew--->
+    <link rel="icon" href="favicon_bell.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="twistForks.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="restaurantdisplay.css">
+  </head>
+<body class = "background10">
+<div id="app">
+  <h1 class="logohead"><img src="logohead1.png" alt="DINEoutTONIGHT" class="logoimg">  Twist Forks</h1>
+
+
+  <div class="navbar">
+    <a class="active" href="index.html">Home</a>
+    <a href="map.html">Map</a>
+
+    <div class="logdropdown">
+      <button class="logdropbtn">username
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="logged_in_customer.html">Manage Booking</a>
+        <a href="change_login_information.html">My Profile</a>
+        <a @click="logoutAction">Log Out</a>
+      </div>
+    </div>
+
+    <div class="logdropdown">
+      <button class="logdropbtn">Sign Up
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="signin.html">Customer Sign-Up</a>
+        <a href="register_restaurant.html">Restauranteur Sign-Up</a>
+      </div>
+    </div>
+  </div>
+
+  <h1 class = "manage">Manage Booking</h1>
+
+  <table>
+    <tr>
+      <th>Restaurant</th>
+      <th>Time/Date</th>
+      <th>People</th>
+      <th>Reference number</th>
+      <th>Booking Status</th>
+      <th>Processing Status</th>
+      <th>Evalute</th>
+    </tr>
+    <tr>
+      <td>Dumpling King</td>
+      <td>10:00/15/5</td>
+      <td>2</td>
+      <td>#23</td>
+      <!---<td><span><a href=" ">Modify booking</a></span></td>--->
+      <td><button class="modifyButton" onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Modify</button></td>
+      <td>Accepted</td>
+      <td><span><a href=" ">Evalute here</a></span> </td>
+    </tr>
+    <tr>
+      <td>Old House Restaurant</td>
+      <td>1:00/12/5</td>
+      <td>4</td>
+      <td>#89</td>
+      <td>Booked</td>
+      <td>Accepted</td>
+      <td><span><a href=" ">Evalute here</a></span> </td>
+    </tr>
+  </table>
+  <div id="id03" class="changelogin">
+    <form class="changelogin-content animate">
+      <div class="changeimgcontainer">
+        <span onclick="document.getElementById('id03').style.display='none'" class="changeclose" title="Close Modal">&times;</span>
+      </div>
+      <div class="changeM">
+        <h1 class= "changehead">What you want to do?</h1>
+        <button type="submit">Cancel your booking</button>
+        <button type="submit">Change time / people</button>
+        <button type="submit">Contact us</button>
+      </div>
+      <div class="changecontainer" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id03').style.display='none'" class="changecancelbutton">Cancel</button>
+        <div style="line-height:5%;">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+</body>
+<script>
+  // Get the modal
+  var modal = document.getElementById('id03');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/vue.min.js"></script>
+<script type="text/javascript" src="twistforks.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    mounted: function () {
+    },
+    data: {
+      dateValue: '',
+      timeValue: '',
+      personNum: '1',
+      restaurantName: '',
+      login: {
+        type: '',
+        username: '',
+        password: ''
+      }
+    },
+    methods: {
+      logoutAction: function () {
+        localStorage.removeItem('userinfo');
+        window.location.href='/index.html';
+      },
+      searchAction: function () {
+        console.dir(this.$data);
+        alert('searchAction')
+        debugger
+      },
+      loginAction: function (type) {
+        this.login.type = type;
+        console.dir(this.login);
+        alert('loginAction')
+        debugger
+      }
+    }
+  })
+
+</script>
+</html>
+

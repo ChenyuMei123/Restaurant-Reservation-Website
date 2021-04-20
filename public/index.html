@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="icon" href="favicon_bell.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="twistForks.css">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+
+  <div class="listBG">
+    <h1 class="logohead"><img src="logohead1.png" alt="DINEoutTONIGHT" class="logoimg"> Twist Forks</h1>
+
+  </div>
+  <!-- Navigation -->
+  <div class="navbar">
+    <a class="active" href="index.html">Home</a>
+    <a href="map.html">Map</a>
+
+    <div class="logdropdown">
+      <button class="logdropbtn">Login
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <button onclick="document.getElementById('id01').style.display='block'">Guest Login</button>
+        <button onclick="document.getElementById('id02').style.display='block'">Restaurant Login</button>
+      </div>
+    </div>
+    <div class="logdropdown">
+      <button class="logdropbtn">Sign Up
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="signin.html">Customer Sign-Up</a>
+        <a href="register_restaurant.html">Restauranteur Sign-Up</a>
+      </div>
+    </div>
+  </div>
+
+  <!--- big pic--->
+  <div class="homesearch">
+    <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </pre>
+
+    <div class="stickyC">
+
+      <form >
+        <label for="datepicker"></label>
+        <input class="fa fa-calendar" id="datepicker" type="date" v-model="dateValue">
+        <select name="timepicker" v-model="timeValue">
+          <option value="01:00">01:00</option>
+          <option value="01:30">01:30</option>
+          <option value="02:00">02:00</option>
+        </select>
+        <select name="peoplepicker" v-model="personNum">
+          <option value="1">1 person</option>
+          <option value="2">2 people</option>
+          <option value="3">3 people</option>
+        </select>
+        <input type="search" v-model="restaurantName" placeholder="type a resturant name">
+        <input type="button" class="linkSearch" @click="searchAction" value="search" />
+      </form>
+    </div>
+    <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </pre>
+  </div>
+
+  <div class="bgcolor">
+    <h1 class="slogan1">Let's Dine Out Tonight!</h1>
+    <p class="slogan2">
+      <br>
+      Tread yourself a great time of meal and love!
+    </p>
+  </div>
+
+  <!---login system--->
+
+  <div id="id01" class="login">
+
+    <div class="login-content animate">
+      <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+
+        <img src="login.jpg" width="12%" height="8%">
+      </div>
+
+
+      <div class="container">
+        <label ><b>ID:</b></label>
+        <input type="text" placeholder="Enter your ID"  v-model="login.id" required>
+
+        <label ><b>Password:</b></label>
+        <input type="password" placeholder="Enter Password" v-model="login.password" required>
+        <div class="loginM">
+          <button type="submit" @click="loginAction('customer')">Login</button>
+          <button type="submit">Login with your Facebook</button>
+          <button ctype="submit">Login with your Twitter</button>
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember
+        </label>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbutton">
+          Register
+        </button>
+        <span class="psw"><a href="#">Forgot your password?</a></span>
+        <br>
+        <br>
+        <span class="psw"><a href="#">Change your login information</a></span>
+      </div>
+    </div>
+  </div>
+
+
+  <!---meimei login rest--->
+
+  <div id="id02" class="login">
+    <div class="login-content animate">
+      <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+        <img src="login.jpg" width="12%" height="8%">
+        <p>( Restaurant )</p>
+      </div>
+      <div class="container">
+        <label><b>ID:</b></label>
+        <input type="text" placeholder="Enter your ID" v-model="login.id" required>
+
+        <label><b>Password:</b></label>
+        <input type="password" placeholder="Enter Password" v-model="login.password" required>
+        <div class="loginM">
+          <button type="submit" @click="loginAction('restaurants')">Login</button>
+          <button type="submit">Login with your Facebook</button>
+          <button ctype="submit">Login with your Twitter</button>
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember
+        </label>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbutton">
+          Register
+        </button>
+        <span class="psw"><a href="#">Forgot your password?</a></span>
+        <br>
+        <br>
+        <span class="psw"><a href="#">Change your login information</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!--- slice pic--->
+  <div class="slideshow-containerC">
+
+    <div class="mySlidesC fadeC">
+      <img class="imgC" src="ppt06.jpg" style="width:100%">
+      <div class="textC">Dessert</div>
+    </div>
+
+    <div class="mySlidesC fadeC">
+      <img class="imgC" src="ppt07.jpg" style="width:100%">
+      <div class="textC">BarFood</div>
+    </div>
+
+
+    <div class="mySlidesC fadeC">
+      <img class="imgC" src="ppt02.jpg" style="width:100%">
+      <div class="textC">Asian</div>
+    </div>
+
+    <a class="prevC" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="nextC" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+  <br>
+
+  <div style="text-align:center;background-color:#F1F0F2;">
+    <span class="dotC" onclick="currentSlide(1)"></span>
+    <span class="dotC" onclick="currentSlide(2)"></span>
+    <span class="dotC" onclick="currentSlide(3)"></span>
+  </div>
+  <!-- top button--->
+  <button onclick="topFunction()" id="myBtn" title="Back to top"><i class="fa fa-chevron-up"></i> Top</button>
+  <!---footer--->
+  <footer>
+    <div class="footerlinks">
+      <ul>
+        <li><a href=ContactUs.html>Contact Us</a></li>
+        <li><a href=FeedBack.html>Feedback</a></li>
+        <li><a href=Privacy_Policy.html>Privacy Policy</a></li>
+
+      </ul>
+    </div>
+    <div class="copyright">
+      <p>Copyright ©2019</p>
+    </div>
+    <div>
+   <pre>
+
+
+   </pre>
+    </div>
+  </footer>
+</div>
+</body>
+<script>
+  // Get the modal
+  var modal = document.getElementById('id01');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+<script>
+  // Get the modal
+  var modal = document.getElementById('id02');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlidesC");
+    var dots = document.getElementsByClassName("dotC");
+    if (n > slides.length) {
+      slideIndex = 1
+    }
+    if (n < 1) {
+      slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace("activeC", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " activeC";
+  }
+</script>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/vue.min.js"></script>
+<script type="text/javascript" src="twistforks.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    mounted: function () {
+    },
+    data: {
+      dateValue: '',
+      timeValue: '',
+      personNum: '1',
+      restaurantName: '',
+      login: {
+        type: '',
+        id: '',
+        password: ''
+      }
+    },
+    methods: {
+      searchAction: function () {
+        localStorage.setItem('searchCondition', JSON.stringify(this.$data));
+        window.location.href = 'restaurantdisplay.html';
+        // console.dir(this.$data);
+        // alert('searchAction')
+        // $.ajax({
+        //   type: "POST",
+        //   url: "/restaurant/search",
+        //   data: this.$data,
+        //   success: function(msg){
+        //     alert( "Data Saved: " + msg );
+        //   }
+        // });
+        // debugger
+        // window.location.href = 'restaurantdisplay.html';
+      },
+      loginAction: function (type) {
+        var that = this;
+        this.login.type = type;
+        console.dir(this.login);
+        var urlStr = '/users'
+        if (this.login.type == 'customer') {
+          urlStr = urlStr + '/login/cusid';
+        } else {
+          urlStr = urlStr + '/login/restaurantid';
+        }
+        $.ajax({
+          type: "POST",
+          url: urlStr,
+          data: that.login,
+          success: function(res){
+            if (res.state == 1) {
+              alert('登录成功');
+              localStorage.setItem('userinfo', JSON.stringify(res.user));
+              if (that.login.type == 'customer') {
+                window.location.href = '/logged_into_customer.html';
+              } else {
+                window.location.href = '/logged_into_restaurant.html';
+              }
+            } else {
+              alert('登录失败');
+            }
+          }
+        });
+      }
+    }
+  })
+
+</script>
+</html>

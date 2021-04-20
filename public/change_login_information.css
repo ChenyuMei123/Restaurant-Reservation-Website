@@ -1,0 +1,110 @@
+.registerhere{
+    color: darkred;
+    text-align: center
+}
+.registerid{
+    color: #F78181;
+    text-align: center
+}
+
+.register .inputClass {
+    margin: 0px 80px;;
+}
+
+.register .inputClass label{
+    width: 40%;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    color: darkred;
+    padding-bottom: 5px;
+}
+.register .inputClass p
+{
+    width: 40%;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    color: #F78181;
+    padding-bottom: 5px;
+}
+
+.gender{
+ color: darkred; 
+}
+
+.register .inputClass input{
+    width: 40%;
+    border: 1px solid pink;
+    border-radius: 5px;
+    padding: 8px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.register .inputClass input[type=radio]{
+    margin-bottom: 0px;
+    align-content: left;
+}
+
+
+.register .buttonClass a .cancelButton:hover {
+    background-color: gainsboro;
+}
+
+.register .buttonClass a .cancelButton {
+    background-color: grey;
+    color: white;
+    padding: 5px;
+    border: 1px solid #F78181;
+    width: 20%;
+    border-radius: 5px;
+    font-family: 'Amatic SC', cursive;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.register .buttonClass a{
+    text-decoration: none;
+}
+
+.register .buttonClass .registerButton {
+    background-color: #F78181;
+    color: white;
+    padding: 5px;
+    border: 1px solid #F78181;
+    border-radius: 5px;
+    width: 20%;
+    font-family: 'Amatic SC', cursive;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin: 0 auto;
+}
+
+.register .buttonClass a .cancelButton {
+    background-color: grey;
+    color: white;
+    padding: 5px;
+    border: 1px solid #F78181;
+    width: 20%;
+    border-radius: 5px;
+    font-family: 'Amatic SC', cursive;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.background2{
+   background-image: url("background02.jpg");
+   background-size: 100%; 
+   background-repeat: repeat-y;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Twist Forks</title>
+  <link rel="stylesheet" href="register.css">
+</head>
+
+<body class="background2">
+<div id="app" class="register">
+  <h1 class="registerhere"><b>Register Your Restaurant Here!</b></h1>
+  <p class="registerid"></p>
+  <div >
+    <div class="inputClass">
+      <label><strong>Name of the Restaurant</strong></label>
+      <input type="text" placeholder="Name" v-model="name" required>
+
+      <label><strong>Create Username</strong></label>
+      <input type="text" placeholder="Create Username" v-model="username" required>
+      <label><strong>Email</strong></label>
+      <input type="email" placeholder="Enter Email" v-model="email" required>
+      <label><strong>Password</strong></label>
+      <input type="password" placeholder="Enter Password" v-model="password" required>
+      <label><strong>Repeat Password</strong></label>
+      <input type="password" placeholder="Retype Password" v-model="repassword" required>
+      <label><strong>Phone Number</strong></label>
+      <input type="number" placeholder="Enter phone number" v-model="phone" required>
+      <label><strong>Address</strong></label>
+      <input type="text" placeholder="Enter address" v-model="address" required>
+      <label><strong>Open Time</strong></label>
+      <input type="time" v-model="opentime" min="8:00" max="24:00" required>
+      <label><strong>Close Time</strong></label>
+      <input type="time" v-model="closetime" min="8:00" max="24:00" required>
+      <div class="buttonClass">
+        <button @click="registAction" class="registerButton">Register</button>
+        <a href="HomePage.html">
+          <button type="button" class="cancelButton">Cancel</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/vue.min.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    mounted: function () {
+    },
+    data: {
+      name: '',
+      address: '',
+      email: '',
+      phone: '',
+      closetime: '',
+      opentime: '',
+      password: '',
+      repassword: '',
+      username: ''
+    },
+    methods: {
+      registAction: function () {
+        if (this.password != this.repassword) {
+          alert('两次密码不一致')
+          return false;
+        }
+        $.ajax({
+          type: "POST",
+          url: "/users/regist/restaurant",
+          data: this.$data,
+          success: function(res){
+            if (res.state == 1) {
+              localStorage.setItem('userinfo', JSON.stringify(res.user));
+              alert('登录成功');
+              window.location.href = '/logged_into_restaurant.html';
+            } else {
+              alert('登录失败');
+            }
+          }
+        });
+
+      }
+    }
+  })
+
+</script>
+</html>
