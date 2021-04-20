@@ -40,4 +40,3 @@ Restaurateurs’ login:
 Contact/ Feedback, and Private Policy:
 1.	Contact and Feedback page has a text massage block, customer can leave their advice and feedback here.
 2.	Private policy shows the policy the website agree with. 
-![image](https://user-images.githubusercontent.com/51902679/115323688-b3151800-a1c7-11eb-9a5d-72ba8a6be3fe.png)
